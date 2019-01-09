@@ -216,12 +216,12 @@ public class Pixel
    * Method to set the pixel color to the passed in color object.
    * @param red2 the new color to use
    */
-  public void setColor(int red2) 
+  public void setColor(Color newColor) 
   {
     // set the red, green, and blue values
-    int red = red2.getRed();
-    int green = red2.getGreen();
-    int blue = red2.getBlue();
+    int red = newColor.getRed();
+    int green = newColor.getGreen();
+    int blue = newColor.getBlue();
     
     // update the associated picture
     updatePicture(this.getAlpha(),red,green,blue);
