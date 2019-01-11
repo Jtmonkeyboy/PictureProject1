@@ -1,4 +1,7 @@
 package pixLab.classes;
+
+import java.awt.Color;
+
 /**
  * This class contains class (static) methods
  * that will help you test the Picture class 
@@ -61,6 +64,16 @@ public class PictureTester
     swan.explore();
   }
   
+  public static void testChromakey()
+  {
+	  Picture source = new Picture("world_Meme_Database.jpg");
+	  Picture background = new Picture("computer_Kid.jpg");
+	  source.explore();
+	  background.explore();
+	  source.chromakey(background, Color.WHITE);
+	  source.explore();
+  }
+  
   public static void testGlitchify()
   {
 	  Picture glitched = new Picture("beach.jpg");
@@ -92,12 +105,12 @@ public class PictureTester
     //testCopy();
     	//testEdgeDetection();
     //testEdgeDetection2();
-    //testChromakey();
+    testChromakey();
     //testEncodeAndDecode();
     //testGetCountRedOverValue(250);
     //testSetRedToHalfValueInTopHalf();
     //testClearBlueOverValue(200);
     //testGetAverageForColumn(0);
-    testGlitchify();
+    //testGlitchify();
   }
 }
