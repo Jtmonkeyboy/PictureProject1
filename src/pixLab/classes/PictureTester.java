@@ -105,12 +105,12 @@ public class PictureTester
     //testCopy();
     	//testEdgeDetection();
     //testEdgeDetection2();
-    testChromakey();
+    //testChromakey();
     //testEncodeAndDecode();
     //testGetCountRedOverValue(250);
     //testSetRedToHalfValueInTopHalf();
     //testClearBlueOverValue(200);
     //testGetAverageForColumn(0);
-    //testGlitchify();
+    testGlitchify();
   }
 }

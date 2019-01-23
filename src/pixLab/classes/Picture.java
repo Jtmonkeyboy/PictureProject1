@@ -183,49 +183,62 @@ public class Picture extends SimplePicture
   
   public void glitchify()
   {
-	  int red = 0;
-	  int green = 1;
-	  int blue = 2;
+	  Pixel[][] pixel = this.getPixels2D();
+	  
+	  int height = pixel.length;
+	  int width = pixel[0].length;
+	  //addNoise();
+	  RGBColor();
+	  randomize(0,0,height,width);
+  }
+  
+  public void addNoise()
+  {
+	  Pixel[][] pixel = this.getPixels2D();
+	  
+	  int height = pixel.length;
+	  int width = pixel[0].length;
+	  
+	  for(int row = 0; row < height; row++)
+	  {
+		  for(int col = 0; col < width; col++)
+		  {
+			  
+		  }
+	  }
+  }
+  
+  public void RGBColor()
+  {
+	  final int RED = 0;
+	  final int GREEN = 1;
+	  final int BLUE = 2;
 	  
 	  int random = (int)(Math.random() * 2);
 	  
-	  Picture copy = new Picture(this);
+	  Pixel[][] pixel = this.getPixels2D();
 	  
-	  Pixel[][] copy1 = copy.getPixels2D();
+	  int height = pixel.length;
+	  int width = pixel[0].length;
 	  
-	  Pixel leftPixel = null;
-	  Pixel rightPixel = null;
-	  Pixel[][] beach = this.getPixels2D();
-	  for(int row = 0; row < 480; row++)
+	  for(int row = 0; row < height; row++)
 	  {
-		  for(int col = 0; col < 640; col++)
+		  for(int col = 0; col < width; col++)
 		  {
-			  leftPixel = beach[row][col];
-			  rightPixel = beach[row][420 - col + 420];
-			  rightPixel.setColor(leftPixel.getColor());
-			  if(random == red)
+			  if(random == RED)
 			  {
-				  beach[row][col].setRed(0);
+				  pixel[row][col].setRed(0);
 			  }
-			  if(random == green)
+			  if(random == GREEN)
 			  {
-				  beach[row][col].setGreen(0);
+				  pixel[row][col].setGreen(0);
 			  }
-			  if(random == blue)
+			  if(random == BLUE)
 			  {
-				  beach[row][col].setBlue(0);
+				  pixel[row][col].setBlue(0);
 			  }
 		  }
 	  }
-	  
-	  
-	  
-	  //Top 163
-	  //Bottom 239
-	  //Left 303
-	  //Right 406
-	  
-	  //480 x 640
   }
   
   public void shiftLeftRight(int amount)
