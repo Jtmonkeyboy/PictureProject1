@@ -82,6 +82,19 @@ public class PictureTester
 	  glitched.explore();
   }
   
+  public static void testSteganography()
+  {
+	  Picture source = new Picture("snowman.jpg");
+	  
+	  Picture message = new Picture("world_Meme_Database.jpg");
+	  source.explore();
+	  message.explore();
+	  source.hidePicture(message);
+	  source.explore();
+	  source.revealPicture();
+	  source.explore();
+  }
+  
   /** Main method for testing.  Every class can have a main
     * method in Java */
   public static void main(String[] args)
@@ -111,6 +124,7 @@ public class PictureTester
     //testSetRedToHalfValueInTopHalf();
     //testClearBlueOverValue(200);
     //testGetAverageForColumn(0);
-    testGlitchify();
+    //testGlitchify();
+    testSteganography();
   }
 }
