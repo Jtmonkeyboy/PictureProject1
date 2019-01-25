@@ -76,7 +76,7 @@ public class PictureTester
   
   public static void testGlitchify()
   {
-	  Picture glitched = new Picture("beach.jpg");
+	  Picture glitched = new Picture("spongegar.png");
 	  glitched.explore();
 	  glitched.glitchify();
 	  glitched.explore();
@@ -124,7 +124,7 @@ public class PictureTester
     //testSetRedToHalfValueInTopHalf();
     //testClearBlueOverValue(200);
     //testGetAverageForColumn(0);
-    //testGlitchify();
-    testSteganography();
+    testGlitchify();
+	  //testSteganography();
   }
 }

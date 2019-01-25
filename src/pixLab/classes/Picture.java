@@ -310,9 +310,9 @@ public class Picture extends SimplePicture
   {
 	  Pixel[][] pixels = this.getPixels2D();
 	  
-	  for(int row = startRow; row < endRow; row++)
+	  for(int row = startRow; row < endRow; row += 3)
 	  {
-		  for(int col = startCol; col < endCol; col++)
+		  for(int col = startCol; col < endCol; col += 3)
 		  {
 			  int randomNumber = (int)(Math.random() * 10);
 			  if(randomNumber % 7 == 0);
