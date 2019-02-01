@@ -190,20 +190,22 @@ public class Picture extends SimplePicture
 	  //addNoise();
 	  RGBColor();
 	  randomize(0,0,height,width);
+	  //chunk();
   }
   
-  public void addNoise()
+  public void chunk()
   {
+	  Pixel leftPixel = null;
+	  Pixel rightPixel = null;
 	  Pixel[][] pixel = this.getPixels2D();
 	  
-	  int height = pixel.length;
-	  int width = pixel[0].length;
-	  
-	  for(int row = 0; row < height; row++)
+	  for(int row = 27; row < 51; row++)
 	  {
-		  for(int col = 0; col < width; col++)
+		  for(int col = 80; col < 105; col++)
 		  {
-			  
+			  leftPixel = pixel[row][col];
+			  rightPixel = pixel[row][105 - col + 105];
+			  rightPixel.setRed(0);
 		  }
 	  }
   }
